@@ -24,3 +24,12 @@ Working On:
 - Also need the icon to show. 
 - And ability to search. 
 - Styling is needed, but only after I can get all the data to display properly.
+
+**Day 2**
+
+Completed:
+- Business Redesign presentaion
+
+Working On:
+- CSS styling
+- getting the needed data from API calls in postman

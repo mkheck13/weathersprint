@@ -1,17 +1,48 @@
 
 
-
+:root{
+    --body-bg: rgba(240, 235, 229, 1);
+    --main-bg: rgba(241, 234, 216, 1);
+    --main-text-color: rgba(253, 135, 74, 1);
+    --alt-text-color: rgba(78, 116, 95, 1);
+    --search-bg: rgba(231, 195, 159, 1);
+    --five-day-bg: rgba(194, 195, 138, 1);
+}
 
 
 body{
-    background-color: rgba(240, 235, 229, 1);
+    background-color: var(--body-bg);
 }
 
 .card-container{
-    background-color: rgba(241, 234, 216, 1);
+    background-color: var(--main-bg);
     color: rgba(253, 135, 74, 1);
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
+.search-bar{
+    background-color: rgba(231, 195, 159, 1);
+    border-radius: 20px;
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+}
+.favBtn{
+    background-color: transparent;
+    border: none;
+}
+.searchBtn{
+    background-color: transparent;
+    border: none;
+}
+.searchBox{
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+}
+.main-location{
+    color: rgba(78, 116, 95, 1);
+}

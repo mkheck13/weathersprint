@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Sprint</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
 
     <div class="card-container">
         <div class="main-card">
-            <form class="d-flex me-5 pe-5" role="search">
-                <input id="userSearch" class="form-control me-2 searchBox" type="text" placeholder="Search for a City"
-                    aria-label="Search">
-                <button id="searchBtn" class="btn searchBtn" type="button"><img class="img-fluid" width="25px"
-                        src="./assets/magnify.png" alt="search icon"></button>
-            </form>
+            <div class="search-div">
+                <form class="search-bar" role="search">
+                    <button id="favBtn" class="favBtn" type="button"><img class="img-fluid" width="25px"
+                            src="./assets/hambergerIcon.png" alt="fav icon"></button>
+                    <input id="userSearch" class="searchBox" type="text" placeholder="Search for a City"
+                        aria-label="Search">
+                    <button id="searchBtn" class="searchBtn" type="button"><img class="img-fluid" width="25px"
+                            src="./assets/magnify.png" alt="search icon"></button>
+                </form>
+            </div>
+            
+
+
+
+            
             <p id="mainLocation" class="main-location">location</p>
             <div>
                 <img id="mainImage" src="" alt="">
@@ -59,7 +70,10 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script type="module" src="./scripts/app.js"></script>
 </body>
+
 </html>
