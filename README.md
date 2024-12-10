@@ -29,6 +29,7 @@ Working On:
 
 Completed:
 - Business Redesign presentaion
+- Added assets
 
 Working On:
 - CSS styling
