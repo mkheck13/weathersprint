@@ -11,6 +11,7 @@
 <body>
 
     <div class="card-container">
+        <!-- current day start -->
         <div class="main-card">
             <div class="search-div">
                 <form class="search-bar" role="search">
@@ -22,29 +23,95 @@
                             src="./assets/magnify.png" alt="search icon"></button>
                 </form>
             </div>
-            
+            <div class="location-container">
+                <button></button>
+                <p id="mainLocation" class="main-location">location</p>
+            </div>
+
+            <div class="main-3-col">
+
+                <div>
+                    <img id="mainImage" src="" alt="current weather icon">
+                    <p id="mainDesc">desc</p>
+                </div>
+
+                <div>
+                    <p id="mainTemp">temp</p>
+                    <p>f to c btn here</p>
+                </div>
+
+                <div>
+                    <p id="mainMinTemp">min temp</p>
+                    <p id="mainMaxTemp">max temp</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- current day end -->
 
 
 
-            
-            <p id="mainLocation" class="main-location">location</p>
-            <div>
-                <img id="mainImage" src="" alt="">
-                <p id="mainDesc">desc</p>
+
+
+        <!-- 5 day forcast start -->
+        <div class="five-day">
+            <!-- day 1 -->
+            <div class="">
+                <img class="dayOneIcon" src="" alt="day One image">
+                <div>
+                    <p class="dayOneMax">high</p>
+                    <p class="dayOneMin">low</p>
+                </div>
+                <h3 class="dayOneDay">day</h3>
             </div>
-            <div>
-                <p id="mainTemp">temp</p>
-                <p>f to c btn here</p>
+
+            <!-- day 2 -->
+            <div class="">
+                <img class="dayTwoIcon" src="" alt="day Two image">
+                <div>
+                    <p class="dayTwoMax">high</p>
+                    <p class="dayTwoMin">low</p>
+                </div>
+                <h3 class="dayTwoDay">day</h3>
             </div>
-            <div>
-                <p id="mainMinTemp">min temp</p>
-                <p id="mainMaxTemp">max temp</p>
+
+
+            <!-- day 3 -->
+            <div class="">
+                <img class="dayThreeIcon" src="" alt="day Three image">
+                <div>
+                    <p class="dayThreeMax">high</p>
+                    <p class="dayThreeMin">low</p>
+                </div>
+                <h3 class="dayThreeDay">day</h3>
             </div>
+
+
+            <!-- day 4 -->
+            <div class="">
+                <img class="dayFourIcon" src="" alt="day Four image">
+                <div>
+                    <p class="dayFourMax">high</p>
+                    <p class="dayFourMin">low</p>
+                </div>
+                <h3 class="dayFourDay">day</h3>
+            </div>
+
+
+            <!-- day 5 -->
+            <div class="">
+                <img class="dayFiveIcon" src="" alt="day Five image">
+                <div>
+                    <p class="dayFiveMax">high</p>
+                    <p class="dayFiveMin">low</p>
+                </div>
+                <h3 class="dayFiveDay">day</h3>
+            </div>
+
+
 
         </div>
-        <div>
-            <h1>Cards here</h1>
-        </div>
+        <!-- 5 day forcast end -->
 
     </div>
 

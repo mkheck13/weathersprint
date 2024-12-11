@@ -19,7 +19,11 @@ body{
     color: rgba(253, 135, 74, 1);
     border: 2px solid black;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
+}
+
+.main-card{
+    grid-column: span 5;
 }
 
 .search-bar{
@@ -45,4 +49,23 @@ body{
 }
 .main-location{
     color: rgba(78, 116, 95, 1);
+}
+.location-container{
+    display: flex;
+    justify-content: center;
+}
+
+.main-3-col{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+hr{
+    grid-column: span 5;
+    border: 2px solid  black;
+}
+
+.five-day{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
 }

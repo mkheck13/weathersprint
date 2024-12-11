@@ -34,3 +34,11 @@ Completed:
 Working On:
 - CSS styling
 - getting the needed data from API calls in postman
+
+**Day 3**
+
+Completed:
+- Getting all the current days data to show including the icon
+
+Working On:
+- Having trouble getting my five day forcast to display, will continue to work on it.
