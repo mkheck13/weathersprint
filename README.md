@@ -6,10 +6,11 @@
 
 **Developer:** Michael Heckerman
 
-**Date Revised:** 12/9/24
+**Date Revised:** 12/13/24
 
-
+[Github-Repo](https://github.com/mkheck13/weathersprint)
 [Figma](https://www.figma.com/design/ldUWQTiHsWodPq4GH4jeok/Weather-App?node-id=0-1&t=YdltH3a8wa8KZsqC-1)
+[Vercel](https://weathersprint.vercel.app/)
 
 ## End Of Day Update
 
@@ -47,3 +48,22 @@ Working On:
 
 Working On:
 - Still dealing with lots of errors. When I fix one, it breaks other parts of my code. Lots of uncaught errors that are keeping me from having my data display properly. I honestly feel like I have taken a huge step backwards. I am going to take a break for a little bit.
+
+**Day 5**
+
+Completed:
+- Have all base items displaying
+- Have a basic search function working
+- Removed unused code
+
+Working On:
+- Styles
+- Drop down for Favorites
+- saving favorites
+- removing favorites
+
+## FeedBack/Peer Review:
+
+**Reviewer**: 
+
+**Comments**:

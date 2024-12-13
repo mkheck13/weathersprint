@@ -9,13 +9,10 @@
 </head>
 
 <body>
-
     <div class="card-container">
         <!-- current day start -->
         <div class="main-card">
-            <div>
-                <button id="testBtn" class="testBtn">Test Button</button>
-            </div>
+
             <div class="search-div">
                 <form class="search-bar" role="search">
                     <button id="favBtn" class="favBtn" type="button"><img class="img-fluid" width="25px"
@@ -27,14 +24,16 @@
                 </form>
             </div>
             <div class="location-container">
-                <button></button>
+                <button class="star-btn">
+                    <img src="./assets/favStar.png" alt="">
+                </button>
                 <p id="mainLocation" class="main-location">location</p>
             </div>
 
             <div class="main-3-col">
 
                 <div>
-                    <img id="mainImage" src="" alt="current weather icon">
+                    <img id="mainImage" class="mainImage" src="./assets/sun.png" alt="current weather icon">
                     <p id="mainDesc">desc</p>
                 </div>
 
@@ -53,14 +52,11 @@
         <!-- current day end -->
 
 
-
-
-
         <!-- 5 day forcast start -->
-        <div class="five-day">
+        
             <!-- day 1 -->
-            <div class="">
-                <img id=dayOneIcon" class="dayOneIcon" src="" alt="day One image">
+            <div class="five-day">
+                <img id="dayOneIcon" class="five-day-icon" src="./assets/sun.png" alt="day One image">
                 <div>
                     <p id="dayOneMax" class="dayOneMax">high</p>
                     <p id="dayOneMin" class="dayOneMin">low</p>
@@ -69,8 +65,8 @@
             </div>
 
             <!-- day 2 -->
-            <div class="">
-                <img id="dayTwoIcon" class="dayTwoIcon" src="" alt="day Two image">
+            <div class="five-day">
+                <img id="dayTwoIcon" class="five-day-icon" src="./assets/sun.png" alt="day Two image">
                 <div>
                     <p id="dayTwoMax" class="dayTwoMax">high</p>
                     <p id="dayTwoMin" class="dayTwoMin">low</p>
@@ -78,21 +74,19 @@
                 <h3 id="dayTwo" class="dayTwoDay">day</h3>
             </div>
 
-
             <!-- day 3 -->
-            <div class="">
-                <img id="" class="dayThreeIcon" src="" alt="day Three image">
+            <div class="five-day">
+                <img id="dayThreeIcon" class="five-day-icon" src="./assets/sun.png" alt="day Three image">
                 <div>
-                    <p id="" class="dayThreeMax">high</p>
-                    <p id="" class="dayThreeMin">low</p>
+                    <p id="dayThreeMax" class="dayThreeMax">high</p>
+                    <p id="dayThreeMin" class="dayThreeMin">low</p>
                 </div>
                 <h3 id="dayThree" class="dayThreeDay">day</h3>
             </div>
 
-
             <!-- day 4 -->
-            <div class="">
-                <img id="dayFourIcon" class="dayFourIcon" src="" alt="day Four image">
+            <div class="five-day">
+                <img id="dayFourIcon" class="five-day-icon" src="./assets/sun.png" alt="day Four image">
                 <div>
                     <p id="dayFourMax" class="dayFourMax">high</p>
                     <p id="dayFourMin" class="dayFourMin">low</p>
@@ -100,27 +94,21 @@
                 <h3 id="dayFour" class="dayFourDay">day</h3>
             </div>
 
-
             <!-- day 5 -->
-            <div class="">
-                <img id="dayFiveIcon" class="dayFiveIcon" src="" alt="day Five image">
+            <div class="five-day">
+                <img id="dayFiveIcon" class="five-day-icon" src="./assets/sun.png" alt="day Five image">
                 <div>
                     <p id="dayFiveMax" class="dayFiveMax">high</p>
                     <p id="dayFiveMin" class="dayFiveMin">low</p>
                 </div>
                 <h3 id="dayFive" class="dayFiveDay">day</h3>
             </div>
-
-
-
-        </div>
         <!-- 5 day forcast end -->
-
     </div>
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module" src="./scripts/app.js"></script>
 </body>
 

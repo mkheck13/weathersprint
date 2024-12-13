@@ -1,6 +1,4 @@
-
-
-:root{
+:root {
     --body-bg: rgba(240, 235, 229, 1);
     --main-bg: rgba(241, 234, 216, 1);
     --main-text-color: rgba(253, 135, 74, 1);
@@ -10,66 +8,90 @@
 }
 
 
-body{
+body {
     background-color: var(--body-bg);
 }
 
-.card-container{
+.card-container {
     background-color: var(--main-bg);
     color: rgba(253, 135, 74, 1);
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(5, auto);
+    grid-template-rows: 2;
+    row-gap: 3rem;
+    column-gap: 1.5rem;
 }
 
-.main-card{
-    grid-column: span 5;
+.main-card {
+    grid-column: 1 / 6;
+    grid-row: 1;
 }
 
-.search-bar{
+.search-bar {
     background-color: rgba(231, 195, 159, 1);
     border-radius: 20px;
 }
-.search-div{
+
+.search-div {
     display: flex;
     justify-content: center;
 }
-.favBtn{
+
+.favBtn {
     background-color: transparent;
     border: none;
 }
-.searchBtn{
+
+.searchBtn {
     background-color: transparent;
     border: none;
 }
-.searchBox{
+
+.searchBox {
     font-size: 17px;
     background-color: transparent;
     border: none;
 }
-.main-location{
+
+.main-location {
     color: rgba(78, 116, 95, 1);
 }
-.location-container{
+
+.location-container {
     display: flex;
     justify-content: center;
 }
 
-.main-3-col{
+.main-3-col {
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
 
-hr{
+hr {
     grid-column: span 5;
-    border: 2px solid  black;
+    border: 2px solid black;
 }
 
-.five-day{
+.five-day {
+    background-color: var(--five-day-bg);
+    border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(2, auto);
+    color: var(--alt-text-color);
 }
 
-.testBtn{
-    font-size: 50px;
+.five-day-icon {
+    width: 100px;
+    filter: invert();
+}
+
+.star-btn {
+    background: transparent;
+    border: none;
+}
+
+.mainImage {
+    filter:
+        invert(56%) sepia(74%) saturate(1235%) hue-rotate(336deg) brightness(101%) contrast(102%);
 }

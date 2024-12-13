@@ -1,6 +1,9 @@
 // import {APIKEY} from "./environment.js";
 
 
+// Reviewers API Key for testing
+// let APIKEY = 'put your key here and uncomment it'
+
 
 // Current day
 let mainLocation = document.getElementById("mainLocation");
@@ -83,8 +86,6 @@ dayFour.textContent = `${new Date(currentDate.getTime() + 86400000 * 4).toLocale
 dayFive.textContent = `${new Date(currentDate.getTime() + 86400000 * 5).toLocaleDateString('default', { weekday: 'long' })}`
 
 
-
-
 navigator.geolocation.getCurrentPosition(success, errorFunc);
 
 //Getting location on Success
@@ -112,8 +113,6 @@ async function success(position) {
     // Forcast Weather
     const forecastPromise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=imperial`)
     const forecastData = await forecastPromise.json();
-
-
 
     // Reverse Geolocation
     const locationPromise = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${APIKEY}`)
@@ -161,6 +160,7 @@ async function success(position) {
     // Display Data
     let currentTemp = Math.round(weatherData.main.temp);
     mainTemp.textContent = `${currentTemp}°`
+    mainDesc.innerText = `${forecastData.list[0].weather[0].main.toUpperCase()}`;
 
     let currentMin = Math.round(Math.min(...tempMins1));
     let currentMax = Math.round(Math.max(...tempMaxs1));
@@ -276,4 +276,20 @@ function mostFrequent(arr, n) {
     });
 
     return res;
+}
+
+// Search Function
+userSearch.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        success(userSearch.value)
+        userSearch.value = "";
+
+        e.preventDefault();
+        return false;
+    }
+});
+
+function click(evnt){
+    liValue = evnt.target.innerText.split(",")[0];
+    success(liValue)
 }
