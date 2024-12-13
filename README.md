@@ -42,3 +42,8 @@ Completed:
 
 Working On:
 - Having trouble getting my five day forcast to display, will continue to work on it.
+
+**Day 4**
+
+Working On:
+- Still dealing with lots of errors. When I fix one, it breaks other parts of my code. Lots of uncaught errors that are keeping me from having my data display properly. I honestly feel like I have taken a huge step backwards. I am going to take a break for a little bit.

@@ -69,3 +69,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(5, auto);
 }
+
+.testBtn{
+    font-size: 50px;
+}
