@@ -1,6 +1,6 @@
 # Weather Sprint
 
-![Design preview for the weather app]()
+![Design preview for the weather app](./assets/ReadmePreview.png)
 
 **Description:** Build out a desktop application from the provided figma.
 
@@ -9,7 +9,9 @@
 **Date Revised:** 12/13/24
 
 [Github-Repo](https://github.com/mkheck13/weathersprint)
+
 [Figma](https://www.figma.com/design/ldUWQTiHsWodPq4GH4jeok/Weather-App?node-id=0-1&t=YdltH3a8wa8KZsqC-1)
+
 [Vercel](https://weathersprint.vercel.app/)
 
 ## End Of Day Update
