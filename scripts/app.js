@@ -65,8 +65,12 @@ let conditions6 = [];
 
 let userSearch = document.getElementById("userSearch");
 let searchBtn = document.getElementById("searchBtn");
-
+let starBtn = document.getElementById("starBtn");
 let liValue;
+let favArr = [];
+let dropdownList = document.getElementById("dropdownList");
+
+dropdownList.innerText = "";
 
 let lat;
 let lon;
@@ -254,12 +258,17 @@ async function conditionsCheck(string, forecast) {
         default:
             break;
     }
-
+    if(favArr.includes(mainLocation.textContent)){
+        starBtn.src = './assets/SavedBtn.png'
+    }else{
+        starBtn.src = './assets/favStar.png'
+    }
 }
+inFav();
 
 function mostFrequent(arr, n) {
-    var hash = new Map();
-    for (var i = 0; i < n; i++) {
+    let hash = new Map();
+    for (let i = 0; i < n; i++) {
         if (hash.has(arr[i]))
             hash.set(arr[i], hash.get(arr[i]) + 1)
         else
@@ -267,7 +276,7 @@ function mostFrequent(arr, n) {
     }
 
     // find the max frequency 
-    var max_count = 0, res = -1;
+    let max_count = 0, res = -1;
     hash.forEach((value, key) => {
         if (max_count < value) {
             res = key;
@@ -293,3 +302,34 @@ function click(evnt){
     liValue = evnt.target.innerText.split(",")[0];
     success(liValue)
 }
+
+dropdownList.addEventListener("click", click, false);
+
+// make elements for the drop menu for the favorites
+function makeUL(favList){
+    for(let i = 0; i < favList.length; i++){
+        let item = document.createElement("li");
+        item.id = "listItem" + i;
+        item.appendChild(document.createTextNode(favList[i]));
+        dropdownList.appendChild(item);
+    }
+}
+
+function inFav(){
+    dropdownList.innerText = "";
+    makeUL(favArr)
+}
+
+starBtn.addEventListener("click", function showFav(){
+    if(favArr.includes(mainLocation.textContent)){
+        let index = favArr.indexOf(mainLocation.textContent)
+        favArr.splice(index)
+        localStorage.setItem("favorites", favArr)
+        starBtn.src = './assets/favStar.png'
+    }else{
+        favArr.push(mainLocation.textContent)
+        localStorage.setItem("favorites", favArr)
+        starBtn.src = './assets/SavedBtn.png'
+    }
+    inFav();
+})

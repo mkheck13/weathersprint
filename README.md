@@ -8,6 +8,8 @@
 
 **Date Revised:** 12/13/24
 
+## Links:
+
 [Github-Repo](https://github.com/mkheck13/weathersprint)
 
 [Figma](https://www.figma.com/design/ldUWQTiHsWodPq4GH4jeok/Weather-App?node-id=0-1&t=YdltH3a8wa8KZsqC-1)
@@ -57,10 +59,10 @@ Completed:
 - Have all base items displaying
 - Have a basic search function working
 - Removed unused code
+- Drop down for Favorites
 
 Working On:
 - Styles
-- Drop down for Favorites
 - saving favorites
 - removing favorites
 

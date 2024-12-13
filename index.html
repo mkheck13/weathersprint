@@ -15,17 +15,26 @@
 
             <div class="search-div">
                 <form class="search-bar" role="search">
-                    <button id="favBtn" class="favBtn" type="button"><img class="img-fluid" width="25px"
-                            src="./assets/hambergerIcon.png" alt="fav icon"></button>
-                    <input id="userSearch" class="searchBox" type="text" placeholder="Search for a City"
-                        aria-label="Search">
-                    <button id="searchBtn" class="searchBtn" type="button"><img class="img-fluid" width="25px"
-                            src="./assets/magnify.png" alt="search icon"></button>
+                    <div id="dropdown" class="dropdown">
+                        <button id="favBtn" class="btn btn-secondary favBtn dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"><img class="img-fluid" width="25px"
+                                src="./assets/hambergerIcon.png" alt="fav list icon"></button>
+
+                        <input id="userSearch" class="searchBox" type="text" placeholder="Search for a City"
+                            aria-label="Search">
+                        <button id="searchBtn" class="searchBtn" type="button"><img class="img-fluid" width="25px"
+                                src="./assets/magnify.png" alt="search icon"></button>
+                        <ul id="dropdownList" class="dropdown-menu">
+                            <p></p>
+                            <p></p>
+                        </ul>
+                    </div>
+
                 </form>
             </div>
             <div class="location-container">
-                <button class="star-btn">
-                    <img src="./assets/favStar.png" alt="">
+                <button id="starBtn" class="star-btn">
+                    <img src="./assets/favStar.png" alt="fav star">
                 </button>
                 <p id="mainLocation" class="main-location">location</p>
             </div>
@@ -53,62 +62,64 @@
 
 
         <!-- 5 day forcast start -->
-        
-            <!-- day 1 -->
-            <div class="five-day">
-                <img id="dayOneIcon" class="five-day-icon" src="./assets/sun.png" alt="day One image">
-                <div>
-                    <p id="dayOneMax" class="dayOneMax">high</p>
-                    <p id="dayOneMin" class="dayOneMin">low</p>
-                </div>
-                <h3 id="dayOne" class="dayOneDay">day</h3>
-            </div>
 
-            <!-- day 2 -->
-            <div class="five-day">
-                <img id="dayTwoIcon" class="five-day-icon" src="./assets/sun.png" alt="day Two image">
-                <div>
-                    <p id="dayTwoMax" class="dayTwoMax">high</p>
-                    <p id="dayTwoMin" class="dayTwoMin">low</p>
-                </div>
-                <h3 id="dayTwo" class="dayTwoDay">day</h3>
+        <!-- day 1 -->
+        <div class="five-day">
+            <img id="dayOneIcon" class="five-day-icon" src="./assets/sun.png" alt="day One image">
+            <div>
+                <p id="dayOneMax" class="dayOneMax">high</p>
+                <p id="dayOneMin" class="dayOneMin">low</p>
             </div>
+            <h3 id="dayOne" class="dayOneDay">day</h3>
+        </div>
 
-            <!-- day 3 -->
-            <div class="five-day">
-                <img id="dayThreeIcon" class="five-day-icon" src="./assets/sun.png" alt="day Three image">
-                <div>
-                    <p id="dayThreeMax" class="dayThreeMax">high</p>
-                    <p id="dayThreeMin" class="dayThreeMin">low</p>
-                </div>
-                <h3 id="dayThree" class="dayThreeDay">day</h3>
+        <!-- day 2 -->
+        <div class="five-day">
+            <img id="dayTwoIcon" class="five-day-icon" src="./assets/sun.png" alt="day Two image">
+            <div>
+                <p id="dayTwoMax" class="dayTwoMax">high</p>
+                <p id="dayTwoMin" class="dayTwoMin">low</p>
             </div>
+            <h3 id="dayTwo" class="dayTwoDay">day</h3>
+        </div>
 
-            <!-- day 4 -->
-            <div class="five-day">
-                <img id="dayFourIcon" class="five-day-icon" src="./assets/sun.png" alt="day Four image">
-                <div>
-                    <p id="dayFourMax" class="dayFourMax">high</p>
-                    <p id="dayFourMin" class="dayFourMin">low</p>
-                </div>
-                <h3 id="dayFour" class="dayFourDay">day</h3>
+        <!-- day 3 -->
+        <div class="five-day">
+            <img id="dayThreeIcon" class="five-day-icon" src="./assets/sun.png" alt="day Three image">
+            <div>
+                <p id="dayThreeMax" class="dayThreeMax">high</p>
+                <p id="dayThreeMin" class="dayThreeMin">low</p>
             </div>
+            <h3 id="dayThree" class="dayThreeDay">day</h3>
+        </div>
 
-            <!-- day 5 -->
-            <div class="five-day">
-                <img id="dayFiveIcon" class="five-day-icon" src="./assets/sun.png" alt="day Five image">
-                <div>
-                    <p id="dayFiveMax" class="dayFiveMax">high</p>
-                    <p id="dayFiveMin" class="dayFiveMin">low</p>
-                </div>
-                <h3 id="dayFive" class="dayFiveDay">day</h3>
+        <!-- day 4 -->
+        <div class="five-day">
+            <img id="dayFourIcon" class="five-day-icon" src="./assets/sun.png" alt="day Four image">
+            <div>
+                <p id="dayFourMax" class="dayFourMax">high</p>
+                <p id="dayFourMin" class="dayFourMin">low</p>
             </div>
+            <h3 id="dayFour" class="dayFourDay">day</h3>
+        </div>
+
+        <!-- day 5 -->
+        <div class="five-day">
+            <img id="dayFiveIcon" class="five-day-icon" src="./assets/sun.png" alt="day Five image">
+            <div>
+                <p id="dayFiveMax" class="dayFiveMax">high</p>
+                <p id="dayFiveMin" class="dayFiveMin">low</p>
+            </div>
+            <h3 id="dayFive" class="dayFiveDay">day</h3>
+        </div>
         <!-- 5 day forcast end -->
     </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script type="module" src="./scripts/app.js"></script>
 </body>
 
