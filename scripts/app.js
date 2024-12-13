@@ -94,7 +94,7 @@ navigator.geolocation.getCurrentPosition(success, errorFunc);
 
 //Getting location on Success
 async function success(position) {
-    if(userSearch.value){
+    if (userSearch.value) {
         const citySearch = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value}&limit=5&appid=${APIKEY}`);
         const cityName = await citySearch.json();
         lat = cityName[0].lat;
@@ -105,7 +105,7 @@ async function success(position) {
         const cityName = await citySearch.json();
         lat = cityName[0].lat;
         lon = cityName[0].lon;
-    }else{
+    } else {
         lat = position.coords.latitude
         lon = position.coords.longitude
     }
@@ -188,11 +188,11 @@ async function success(position) {
 
 
     let locationName = locationData[0].name;
-    if(locationData[0].state){
+    if (locationData[0].state) {
         let stateName = locationData[0].state;
         mainLocation.textContent = `${locationName}, ${stateName}`;
     }
-    else{
+    else {
         mainLocation.textContent = `${locationName}`;
     }
 
@@ -258,9 +258,9 @@ async function conditionsCheck(string, forecast) {
         default:
             break;
     }
-    if(favArr.includes(mainLocation.textContent)){
+    if (favArr.includes(mainLocation.textContent)) {
         starBtn.src = './assets/SavedBtn.png'
-    }else{
+    } else {
         starBtn.src = './assets/favStar.png'
     }
 }
@@ -288,8 +288,8 @@ function mostFrequent(arr, n) {
 }
 
 // Search Function
-userSearch.addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
+userSearch.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
         success(userSearch.value)
         userSearch.value = "";
 
@@ -298,7 +298,7 @@ userSearch.addEventListener("keypress", function(e){
     }
 });
 
-function click(evnt){
+function click(evnt) {
     liValue = evnt.target.innerText.split(",")[0];
     success(liValue)
 }
@@ -306,8 +306,8 @@ function click(evnt){
 dropdownList.addEventListener("click", click, false);
 
 // make elements for the drop menu for the favorites
-function makeUL(favList){
-    for(let i = 0; i < favList.length; i++){
+function makeUL(favList) {
+    for (let i = 0; i < favList.length; i++) {
         let item = document.createElement("li");
         item.id = "listItem" + i;
         item.appendChild(document.createTextNode(favList[i]));
@@ -315,18 +315,18 @@ function makeUL(favList){
     }
 }
 
-function inFav(){
+function inFav() {
     dropdownList.innerText = "";
     makeUL(favArr)
 }
 
-starBtn.addEventListener("click", function showFav(){
-    if(favArr.includes(mainLocation.textContent)){
+starBtn.addEventListener("click", function showFav() {
+    if (favArr.includes(mainLocation.textContent)) {
         let index = favArr.indexOf(mainLocation.textContent)
         favArr.splice(index)
         localStorage.setItem("favorites", favArr)
         starBtn.src = './assets/favStar.png'
-    }else{
+    } else {
         favArr.push(mainLocation.textContent)
         localStorage.setItem("favorites", favArr)
         starBtn.src = './assets/SavedBtn.png'
