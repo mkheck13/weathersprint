@@ -68,6 +68,6 @@ Working On:
 
 ## FeedBack/Peer Review:
 
-**Reviewer**: 
+**Reviewer**: Charles Orr
 
-**Comments**:
+**Comments**: I reccomend using "cursor: pointer;" to make your buttons more visible, and possibly on load or on click of the search bar call your fiction to append the local storage, very good job i like the way your site looks and how calm the colors are
